@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+	default-lazy-init="true">
+
+	<description>Shiro安全配置</description>
+
+	<!-- Shiro's main business-tier object for web-enabled applications -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="shiroDbRealm" />
+		<property name="rememberMeManager" ref="rememberMeManager"/>
+	<!--	<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		<!-- 自己写的缓存管理 -->
+		<property name="cacheManager" ref="customShiroCacheManager" />
+		<!--&lt;!&ndash; 自己写的session管理 &ndash;&gt;-->
+		<property name="sessionManager" ref="defaultWebSessionManager" />
+	</bean>
+
+
+	<!-- 項目自定义的Realm, 所有accountService依赖的dao都需要用depends-on声明 -->
+	
+	<!-- Shiro Filter -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/login" />
+		<property name="successUrl" value="/index" />
+		<!-- 过滤器链，对URL配置过滤规则 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/login = authc
+				/logout = logout
+				/static/** = anon
+				/favicon.ico = anon
+				/register/** = anon
+				/admin/** = roles[admin]
+				/manager/** = roles[manager]
+				/** = user
+			</value>
+		</property>
+	</bean>
+
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<constructor-arg value="sid"/>
+		<property name="httpOnly" value="true"/>
+		<property name="maxAge" value="-1"/>
+	</bean>
+
+	<bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+		<constructor-arg value="rememberMe"/>
+		<property name="httpOnly" value="true"/>
+		<property name="maxAge" value="2592000"/><!-- 30天 -->
+	</bean>
+
+	<bean id="rememberMeManager"
+		  class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+		<property name="cipherKey" value="#{T(org.apache.shiro.codec.Base64).decode('4AvVhmFLUs0KTA3Kprsdag==')}"/>
+		<property name="cookie" ref="rememberMeCookie"/>
+	</bean>
+	<bean id="formAuthenticationFilter"
+		  class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+		<property name="rememberMeParam" value="rememberMe"/>
+	</bean>
+	<!-- 用户授权信息Cache, 采用EhCache -->
+	<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml"/>
+	</bean>
+	
+	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+	<!-- session共享 -->
+	<bean id="defaultWebSessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		<property name="globalSessionTimeout" value="1200000" />
+		<property name="sessionDAO" ref="customShiroSessionDAO" />
+	</bean>
+
+	<bean id="customShiroSessionDAO" class="com.qiyu.paymanager.shiro.session.CustomShiroSessionDAO">
+		<property name="shiroSessionRepository" ref="jedisShiroSessionRepository" />
+	</bean>
+
+	<bean id="jedisShiroSessionRepository" class="com.qiyu.paymanager.shiro.session.JedisShiroSessionRepository" />
+
+	<!-- cache共享 -->
+	<bean id="customShiroCacheManager" class="com.qiyu.paymanager.shiro.cache.CustomShiroCacheManager">
+		<property name="shiroCacheManager" ref="jedisShiroCacheManager" />
+	</bean>
+
+	<bean id="jedisShiroCacheManager" class="com.qiyu.paymanager.shiro.cache.JedisShiroCacheManager" />
+</beans>

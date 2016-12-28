@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://code.alibabatech.com/schema/dubbo
+              http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- application 全局唯一 -->
+    <dubbo:application id="payserviceApplication"
+                       name="${payservice.dubbo.application.name}"
+                       owner="${payservice.dubbo.application.owner}"
+                       organization="${payservice.dubbo.application.organization}"/>
+
+    <!-- dubbo协议 -->
+    <dubbo:protocol id="payserviceProtocol"
+                    name="${payservice.dubbo.protocol.name}"
+                    port="${payservice.dubbo.protocol.port}"/>
+
+    <!-- 注册中心 -->
+    <dubbo:registry id="payserviceRegistry"
+                    client="${payservice.dubbo.registry.client}"
+                    protocol="${payservice.dubbo.registry.protocol}"
+                    address="${payservice.dubbo.registry.address}"
+                    file="/data/dubbo/payservice/payservice-dubbo-registry.properties"/>
+
+
+
+    <dubbo:consumer id="payserviceConsumer"
+                    application="payserviceApplication"
+                    registry="payserviceRegistry"
+                    check="${payservice.dubbo.consumer.check}"
+                    retries="${payservice.dubbo.consumer.retries}"
+                    group="${payservice.dubbo.consumer.group}"
+                    version="${payservice.dubbo.consumer.version}"/>
+
+
+    <dubbo:reference id="payService"
+                     interface="com.qiyu.pay.service.PayService"
+                     consumer="payserviceConsumer"/>
+    <dubbo:reference id="alipayupload"
+                     interface="com.qiyu.pay.service.IPayService"
+                     consumer="payserviceConsumer"/>
+    <dubbo:reference id="alipaysign"
+                     interface="com.qiyu.pay.service.IPayService"
+                     consumer="payserviceConsumer"/>
+
+</beans>

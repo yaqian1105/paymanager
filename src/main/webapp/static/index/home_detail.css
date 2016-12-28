@@ -1,0 +1,126 @@
+.content-box{
+	width: 896px;
+	margin: 0 auto;
+}
+.fixed-table-container{/*最外层边框*/
+	border: 1px solid #F04648;	
+	border-radius:10px!important;
+	padding-bottom: 120px!important;
+	overflow: visible!important;
+}
+.fixed-table-body{
+	border-radius:10px!important;	
+}
+.bootstrap-table .table{
+	border-bottom: none;
+}
+th{
+	background-color: #F7F5EE;
+}
+th,td{
+	padding: 0!important;
+	text-indent: 32px!important;
+	vertical-align: middle!important;
+}
+.fixed-table-header{
+	border-radius: 10px;
+}
+tbody tr:last-child td{
+	border: 1px solid #F04648;
+}
+th,tr,td,tbody{
+	border: none!important;
+}
+tbody tr{
+	margin: 0 10px!important;
+}
+tbody tr:nth-child(even){
+	background-color:#F8F8F8;
+}
+
+tr td{
+	padding: 24px 0!important;
+}
+div.th-inner{/*td外层div*/
+	color: #555555;
+	font-weight: normal;
+	padding:20px 0!important;
+	border: none!important;
+}
+.pull-left.pagination-detail{
+	display: none;
+}
+.bootstrap-table table{
+	border-bottom:none!important;
+}
+.table{
+	font-size: 14px!important;
+}
+.pull-right.pagination{
+	width:100%;
+	text-align: center;
+	font-size: 14px;
+}
+.fixed-table-pagination{	
+	border-radius: 0 0 10px 10px;
+}
+.pagination li a{
+	padding: 0!important;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-left: 2px;
+	text-align: center;
+}
+.page-pre a{
+	background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 10px 0 0 10px!important;
+	font-size: 16px!important;
+}
+.page-next a{
+     background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 0px 10px 10px 0px!important;	
+}
+.page-number a{
+	color: #000000!important;
+	border: 1px solid #F04648!important;
+}
+.pagination>.active>a{
+	background-color: #F04648;
+	color: #FFFFFF!important;
+}
+.pagination>.active>a:hover{
+	background-color:#F04648;
+}
+.table-title{
+	margin-bottom: 20px;
+}
+.table-title>div{
+	display: inline-block;
+}
+.table-title-left{
+	margin-left: 10px;
+}
+.table-title-right{
+	float: right;
+	margin-right: 50px;
+}
+.table-title-right span{
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+	line-height: 24px;
+	margin-left: 4px;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #CCCCCC;
+	color: #000;
+	cursor: pointer;
+}
+.table-title-right span.active{
+	background-color: #F04648;
+	color: #fff;
+}

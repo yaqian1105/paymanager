@@ -1,0 +1,117 @@
+
+.content-tradding-details{
+	width: 100%;
+	height: 160px;
+}
+.tradding{
+	text-align: center;
+	width: 300px;
+	height: 100%;	
+	color:#FFFFFF;	
+	margin-right: 3.5px;
+	border-radius: 10px;	
+	display: inline-block;
+}
+.tradding p:first-child{
+	height: 46.25%;
+	line-height: 74px;
+}
+.tradding p:nth-child(2){
+	height: 16.25%;
+	line-height: 26px;
+	font-size:26px;	
+}
+.tradding p:nth-child(3){
+	height: 37.5%;
+	line-height: 60px;
+	font-size: 14px;	
+}
+.trading-volume{
+background: linear-gradient(0deg,#ff8236,#ff0066);	
+}
+.trading-order-count{
+background: linear-gradient(0deg,#ffcc53,#ff7800);	
+}
+.trading-merchant-count{
+background: linear-gradient(0deg,#a9cfff,#008aff);	
+}
+.container.line{
+	border: 1px solid red;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.container.pillar{
+	width: 448px;
+	float: left;
+	border: 1px solid red;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.container.pillar.left{
+	margin-right: 20px;
+}
+#line-chart{
+	width: 100%;
+	height:260px;
+}
+#agent-chart,#bussiness-chart{
+    width: 100%;
+	height:414px;
+	border-radius: 10px;
+}
+.pillar .chart-title-wrapper{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #D5D5D5;
+}
+.chart-title{
+	display: inline-block;
+	color: #555555;
+	margin-top:20px;
+	text-indent: 20px;
+}
+.chart-title span{
+	margin-left:10px;
+}
+.chart-title:before{
+	content: '. ';
+}
+.btns{
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+	margin-right: 24px;
+}
+.btns span{
+	display: inline-block;
+	width: 32px;
+	height: 24px;
+	color: #555555;
+	background-color: #CCCCCC;
+	text-align: center;
+	border-radius: 10px;
+	margin-left: 4px;
+	cursor: default;
+}
+.btns span.active{
+	color: white;
+	background-color: #F04648;
+}
+.a-view-detail a{
+	float: right;
+	margin-right: 24px;
+	color: #F04648;
+}
+.pillar.left .a-view-detail{
+	background-color:#FFF;
+	overflow: hidden;
+	height: 35px;
+	line-height: 35px;
+     border-radius: 10px;
+}
+.pillar.right .a-view-detail{
+	background-color:#fff;
+	overflow: hidden;	
+	height: 35px;
+	line-height: 35px;
+	border-radius: 10px;
+}

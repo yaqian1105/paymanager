@@ -1,0 +1,213 @@
+.content-box{
+	width: 896px;
+	margin: 0 auto;
+}
+.fixed-table-container{/*最外层边框*/
+	border: 1px solid #F04648;	
+	border-radius:10px!important;
+	padding-bottom: 120px!important;
+	overflow: visible!important;
+}
+.fixed-table-body{
+	border-radius:10px!important;
+}
+th{/*第一行*/
+	background-color: #F7F5EE;
+}
+div.th-inner{/*td外层div*/
+	color: #555555;
+	font-weight: normal;
+	padding:20px 0!important;
+}
+th,td{
+	padding: 0!important;
+	text-indent: 32px!important;
+	vertical-align: middle!important;
+	border-radius:10px!important;
+}
+.fixed-table-header{
+	border-radius: 10px;
+}
+tbody tr:last-child{/*最后一行border*/
+	border-bottom: 1px dashed #555555!important;
+}
+tbody tr{/*中间间隔*/
+	border-bottom: 1px dashed #F04648!important;
+}
+th,tr,td,tbody{/*去掉所有表格*/
+	border: none!important;
+}
+tr td{
+	padding: 24px 0!important;
+	color:#000000;
+	font-size: 14px;
+}
+.pull-left.pagination-detail{
+	display: none;
+}
+.table{
+	font-size: 14px!important;
+}
+.pull-right.pagination{
+	width:100%;
+	text-align: center;
+	font-size: 14px;
+}
+.fixed-table-pagination{
+	border-radius: 0 0 10px 10px;
+}
+.pagination li a{
+	padding: 0!important;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-left: 2px;
+	text-align: center;
+}
+.page-pre a{
+	background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 10px 0 0 10px!important;
+	font-size: 16px!important;
+}
+.page-next a{
+     background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 0px 10px 10px 0px!important;	
+}
+.page-number a{
+	color: #000000!important;
+	border: 1px solid #F04648!important;
+}
+.pagination>.active>a{
+	background-color: #F04648;
+	color: #FFFFFF!important;
+}
+.pagination>.active>a:hover{
+	background-color:#F04648;
+}
+.a-view-detail{
+	display: block;
+	width: 120px;
+	border-radius: 10px;
+	background-color: #F04648;
+	text-indent: 32px;
+	color: #FFFFFF;
+}
+.a-view-detail.center{
+	margin: 6px 0;
+}
+.content-title-left a{
+	padding: 2px 14px;
+	height:30px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+/*修改*/
+.personInfo{
+	height: 200px;
+	margin-bottom: 20px;
+}
+.personInfo-left{
+	display: inline-block;
+	border-radius: 10px;
+	border:1px solid #F04648;
+	width: 500px;	
+	float: left;
+}
+.personInfo-left-top{
+	background:linear-gradient(0deg,#FF1160,#FF693F);
+	color: #FFFFFF;	
+	border-radius: 10px 10px 0 0;
+	height: 80px;
+}
+.personInfo-left-top .left{
+	display: inline-block;
+	border-radius: 10px 0 0 0;
+}
+.personInfo-left-top .left img{
+	margin-left: 32px;
+	margin-right: 28px;
+	margin-bottom: 32px;
+}
+.personInfo-left-top .right{
+	display: inline-block;
+	height: 100%;
+}
+.personInfo-left-top .right p{
+	height: 50%;
+	line-height: 40px;
+	margin-bottom: 0;
+}
+.personInfo-left-bottom li{
+	text-indent: 32px;
+	color: #555555;
+	font-size: 14px;
+	margin-top: 16px;
+}
+.personInfo-left-bottom li span{
+	margin-right:10px ;
+}
+.personInfo-right{
+	display: inline-block;
+	height: 100%;
+	float: left;
+	width: 386px;
+	color: #FFFFFF;
+	margin-left: 10px;
+	border-radius: 10px;
+	background: linear-gradient(0deg,#FF820A,#FFBF47);
+}
+.personInfo-right p{
+	margin: 0;	
+}
+.personInfo-right .left,.personInfo-right .right{
+	display: inline-block;
+}
+.personInfo-right .left{
+	float: left;
+	margin: 42px 0px auto 56px;
+	padding-right: 54px;
+	border-right: 1px solid #FFFFFF;
+}
+.personInfo-right .right{
+	margin-top: 38px;
+	width: 135px;
+	float: right;
+}
+.personInfo-right .right p{
+	font-size: 14px;
+	margin-top: 6px;
+}
+.personInfo-right .right input{
+	margin-top:10px;
+	width: 108px;
+	height: 30px;
+	border-radius: 10px;
+	box-shadow: none;
+	border: none;
+	color: black;
+}
+.Modify-btn{
+	display: inline-block;
+	width: 108px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 20px;
+	color:#ff870f ;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	cursor: pointer;
+}
+span.Modify-btn.off{
+	margin-top: 10px;
+}
+.back-radio{
+	font-size:50px;
+	margin-bottom: 12px;
+}
+.commissionDataFont{
+	color: #F04648;
+}

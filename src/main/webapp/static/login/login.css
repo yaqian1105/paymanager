@@ -1,0 +1,75 @@
+.wrapper{
+	margin-top: 240px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.twoLine{
+	margin-bottom: 52px;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.threeLine,.fourLine{
+	margin-left: -42px;
+}
+.threeLine img,.fourLine img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.threeLine input,.fourLine input{
+	font-size: 18px;
+	width: 219px;
+	color: #CCCCCC;
+	text-align: center;
+	padding: 8px 0;
+	border: none;
+	border-radius: 10px;
+}
+.threeLine{
+	width: 280px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 26px;
+}
+.fourLine{
+	width: 280px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom:40px ;
+}
+.fiveLine button{
+	display: inline-block;
+	width:150px;
+	height: 35px;
+	border: none;
+	margin-left: 40px;
+	margin-bottom: 22px;
+
+	color: #f04648;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.sixLine a{
+	vertical-align: middle;
+	color: #FFFFFF;
+}
+.lineCenter{
+	display: inline-block;
+	width:1px;
+	height: 14px;
+	vertical-align: middle;
+	background-color: white;
+	margin: 0 24px;
+}
+.icon-wrong{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	padding: 2px;
+	line-height: 13px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	border-radius: 16px;
+	position: absolute;
+	right: 20px;
+	top: 9px;
+}

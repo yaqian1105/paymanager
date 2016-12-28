@@ -1,0 +1,283 @@
+.content-box{
+	width: 896px;
+	margin: 0 auto;
+}
+.content-title-left a{
+	padding: 2px 14px;
+	height:30px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+.content{
+	width: 100%;
+	border: 1px solid #F04648;
+	overflow: hidden;
+	height: 1000px;
+	position: relative;
+	border-radius: 10px;
+}
+.content h4{
+	margin: 20px 0 30px 32px;
+}
+ul.information{
+	display: inline-block;
+	float: left;
+}
+ul.information li{
+	overflow: hidden;
+}
+ul.information li p{
+	float: left;
+}
+ul.information li.li-tip{
+	width: 635px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	margin:-5px 0 5px 32px;
+	padding: 5px;color: #F04648;
+}
+ul.information li span{
+	display: inline-block;
+	background-color: #F04648;
+	color: white;
+	width: 172px;
+	height: 24px;
+	border-radius:10px 0 0 10px;
+	border: 1px solid #F04648;
+	font-size: 14px;
+	text-align: center;
+	margin: 0 6px 16px 32px;
+	float: left;
+}
+ul.information li input{
+	width: 320px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #F04648;
+	border-radius: 0 10px 10px 0;
+	float: left;
+	color:#F04648;
+	text-align: right;
+	padding-right: 16px;
+	font-size:14px;
+}
+ul.information li.special-li>input{
+	width:200px;
+	border-radius: 0px;
+}
+ul.information li.special-li input[type='checkbox']{	
+      float: right;
+        width: 13px;
+        height: 13px;  
+        vertical-align: top;
+         margin-right: 4px;
+}
+ul.information li.special-li span:nth-of-type(2){
+	width: 110px;
+	margin: 0;
+	margin-left: 4px;
+	border-radius: 0 10px 10px 0;
+}
+select{ 
+  /*很关键：将默认的select选择框样式清除*/  
+  appearance:none;   
+  -moz-appearance:none;   
+  -webkit-appearance:none;   
+  background: url(../../static/images/img_angel.png) no-repeat scroll 300px center transparent;
+    width: 320px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #F04648;
+	border-radius: 0 10px 10px 0;
+	float: left;
+	color: #F04648;
+	text-align:center;	
+	font-size:14px;
+}
+option{
+	box-shadow: none;
+	border: 1px solid #F04648!important;
+	color: #F04648;
+	text-align:center;	
+	font-size:14px;
+}
+ul.upload{
+	display: inline-block;
+	width: 284px;
+	float: left;
+	margin-top: 70px;
+	margin-left: 50px;
+}
+ul.upload-bottom{
+	width:95%;
+	margin: 0 auto;
+	padding-top: 30px;
+	overflow: hidden;
+	border-top: 1px solid #F04648;
+	clear: both;
+}
+ul.upload-bottom li{
+	width:33%;
+	float: left;
+	margin-bottom: 20px;
+}
+ul.upload img{
+	width: 284px;
+	height: 140px;
+}
+ul.upload li{
+	margin-top: 20px;
+}
+ul.upload li:first-child{
+	margin-top: 0;
+}
+ul.upload li div,ul.upload-bottom div:first-child{
+	margin-bottom: 10px;
+}
+ul.upload li div>span,ul.upload-bottom div:first-child>span{
+	display: inline-block;
+	width: 172px;
+	height: 24px;
+	line-height: 24px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 10px;
+}
+li.store-interior .reupload{
+	display: inline-block;
+    width: 96px;
+    margin-left: 16px;
+	border: 1px solid #F04648;
+	color: #F04648;
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.upload-img{
+	background-color: #F2F2F2;
+	position: relative;
+	width: 284px;
+	height: 140px;
+	color: #F04648;
+}
+.upload-img,.upload-img img{
+	border-radius: 10px;
+}
+.upload-img div.add{
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 128px;
+    font-weight: lighter;
+	font-size: 56px;
+}
+.upload-img b{
+	position: absolute;
+	bottom: 28px;
+	left: 114px;
+	font-weight: normal;
+	
+}
+.upload-img input[type='file']{
+	width:96px;
+    height: 24px;
+	background-color: #fff;
+	border-radius: 10px;
+	border:1px solid #F04648;
+	color: #F04648;
+}
+.parent-click{
+	position: relative;
+	overflow: hidden;
+}
+.parent-click input{
+	width:100px;
+	position: absolute;
+	left:0;
+	top:0;
+	opacity: 0;
+}
+.parent-click span.click{
+	float: left;
+	width: 96px;
+	height:24px;
+	line-height: 24px;
+	background-color: #fff!important;
+	color: #F04648;
+	border: 1px solid #F04648;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	margin-right: 10px;
+	text-align: center;
+}
+.showFileName{
+	width:175px;
+	height: 25px;
+	line-height: 25px;
+	display:block;float: left;
+	font-size: 14px;
+	font-weight: normal;
+}
+/*特殊*/
+li.store-interior .upload-img{
+	display: inline-block;
+	float: left;
+	width:88px;
+	height: 100px;
+}
+li.store-interior div{
+	margin:10px 0px;
+}
+li.store-interior .reupload{
+	margin: 18px 0 0 5px;
+	width: 80px;
+}
+li.store-interior .upload-img input{
+	width: 100%;
+	height: 100%;
+}
+li.store-interior .upload-img .add{
+	left: 25px;
+	top: 0px;
+}
+li.store-interior .upload-img b{
+	left: 10px;
+	bottom: 8px;
+}
+.operational-information .information li:nth-child(2) input,.operational-information .information li:nth-child(9) input{
+	width: 220px;
+	border-radius: 0;
+}
+.operational-information .information li:nth-child(2) a,.operational-information .information li:nth-child(9) a{
+	background-color: #F04648;
+	color: #fff;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	padding:0 2px;
+	border-radius: 0 10px 10px 0;
+}
+div.steps{
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+	bottom:40px;	
+	text-align: center;
+}
+.steps span{
+	display: inline-block;
+	width:180px;
+	height: 48px;
+	line-height: 48px;
+	background-color: #F04648;
+	color:#FFFFFF;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-right: 12px;
+}
+

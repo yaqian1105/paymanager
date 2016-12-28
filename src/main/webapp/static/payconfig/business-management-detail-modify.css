@@ -1,0 +1,132 @@
+.content-box{
+	width: 896px;
+	margin: 0 auto;
+}
+.content-title-left a{
+	padding: 2px 14px;
+	height:30px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+.fixed-table-container{/*最外层边框*/
+	border: 1px solid #F04648;	
+	border-radius:10px!important;
+	padding-bottom: 120px!important;
+	overflow: visible!important;
+}
+.fixed-table-body{
+	border-radius:10px!important;
+}
+.pull-right {/*搜索栏外层*/
+    float: left!important;
+}
+th{/*第一行*/
+	background-color: #F7F5EE;
+}
+div.th-inner{/*td外层div*/
+	color: #555555;
+	font-weight: normal;
+	padding:20px 0!important;
+	text-align: center;
+}
+th,td{
+	padding: 0!important;
+
+	vertical-align: middle!important;
+	border-radius:10px!important;
+}
+.fixed-table-header{
+	border-radius: 10px;
+}
+tbody tr:last-child{/*最后一行border*/
+	border-bottom: 1px dashed #555555!important;
+}
+tbody tr{/*中间间隔*/
+	border-bottom: 1px dashed #F04648!important;
+}
+th,tr,td,tbody{/*去掉所有表格*/
+	border: none!important;
+}
+tr td{
+	padding: 24px 0!important;
+	color:#000000;
+	font-size: 14px;
+	text-align: center;
+}
+.a-view-detail{
+	display: block;
+	width: 48px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 10px;
+	background-color: #F04648;	
+	color: #FFFFFF;
+	text-indent: 0px !important;
+	text-align: center;
+	cursor: pointer;
+	margin: 16px auto!important;
+}
+.a-view-detail.center{
+	margin: 16px 0;
+
+}
+.mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+ul.mask-con{
+	width: 400px;
+	height:240px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+ul.mask-con li:first-child{
+	background-color: #F04648;
+	color: #FFFFFF;
+	text-align: center;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 10px 10px 0 0;
+}
+ul.mask-con li:nth-child(2),ul.mask-con li:nth-child(3) {
+	text-align: right;
+	margin: 28px 0 16px 0;
+}
+ul.mask-con li:nth-child(3) select,ul.mask-con li:nth-child(2) input{
+	width:177px;
+	border: 1px solid #F04648;
+	margin:0 50px 0 16px!important;
+}
+ul.mask-con li:last-child{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom:32px;
+}
+ul.mask-con li:last-child span{
+	display: inline-block;
+	width: 86px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+ul.mask-con li:last-child span:first-child{
+	background-color: #FFFFFF;
+      color: #F04648;
+      border: 1px solid #F04648;
+      margin-right: 10px;
+}
+ul.mask-con li:last-child span:nth-child(2){
+	background-color: #F04648;
+		color: #FFFFFF;
+}
