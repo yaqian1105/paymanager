@@ -91,20 +91,20 @@
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
-        <property name="driverClassName" value="${oms.jdbc.driverClassName}" />
-        <property name="url" value="${oms.jdbc.url}" />
-        <property name="username" value="${oms.jdbc.username}" />
-        <property name="password" value="${oms.jdbc.password}" />
-        <property name="initialSize" value="${oms.db.minConnection}" />
-        <property name="minIdle" value="${oms.db.minConnection}" />
-        <property name="maxActive" value="${oms.db.maxConnection}" />
+        <property name="driverClassName" value="${paymanager.jdbc.driverClassName}" />
+        <property name="url" value="${paymanager.jdbc.url}" />
+        <property name="username" value="${paymanager.jdbc.username}" />
+        <property name="password" value="${paymanager.jdbc.password}" />
+        <property name="initialSize" value="${paymanager.db.minConnection}" />
+        <property name="minIdle" value="${paymanager.db.minConnection}" />
+        <property name="maxActive" value="${paymanager.db.maxConnection}" />
         <!-- 配置获取连接等待超时的时间 -->
         <property name="maxWait" value="60000" />
         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
         <property name="timeBetweenEvictionRunsMillis" value="60000" />
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
         <property name="minEvictableIdleTimeMillis" value="300000" />
-        <property name="validationQuery" value="${oms.db.validationQuery}" />
+        <property name="validationQuery" value="${paymanager.db.validationQuery}" />
         <property name="testWhileIdle" value="true" />
         <property name="testOnBorrow" value="false" />
         <property name="testOnReturn" value="false" />

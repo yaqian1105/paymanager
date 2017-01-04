@@ -68,7 +68,7 @@
             </props>
         </property>
     </bean>-->
-    <beans profile="debug">
+  <!--  <beans profile="debug">
         <context:property-placeholder ignore-resource-not-found="true"
                                       location="classpath*:debug.properties"/>
     </beans>
@@ -76,5 +76,5 @@
     <beans profile="product">
         <context:property-placeholder ignore-resource-not-found="true"
                                       location="classpath*:/product.properties"/>
-    </beans>
+    </beans>-->
 </beans>

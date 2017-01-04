@@ -18,7 +18,10 @@ var handleEvns=(function () {
 	var makeForm=function () {
 	var datas=[];
 	 var merchantInfoArr=agentMerchantsQuery();
-	for (var i=0;i<merchantInfoArr.length;i++) {
+		if(merchantInfoArr==null){
+			return;
+		}
+		for (var i=0;i<merchantInfoArr.length;i++) {
 		var obj={
 			id: i+1,
 	        name:"<p>"+merchantInfoArr[i].merchantName+"</p><p>"+merchantInfoArr[i].fixedPhone+"</p><p>"+merchantInfoArr[i].contact+"</p><p>"+merchantInfoArr[i].phone+"</p>",

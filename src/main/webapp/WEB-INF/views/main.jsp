@@ -34,7 +34,6 @@
     <div class="content-wrapper clearfix p20" style="position: relative;">
         <iframe id="contentIFrame" src="${rootPath}/echart/welcome" frameborder="0">
         </iframe>
-
     </div>
 </div>
 </body>

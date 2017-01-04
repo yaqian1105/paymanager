@@ -6,7 +6,7 @@
 
   <context-param>
     <param-name>webAppRootKey</param-name>
-    <param-value>oms.root</param-value>
+    <param-value>paymanager.root</param-value>
   </context-param>
 
 

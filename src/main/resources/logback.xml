@@ -7,9 +7,9 @@
     </appender>
 
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/logs/qiyu/oms/oms.log</file>
+        <file>/data/logs/qiyu/paymanager/paymanager.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>/data/logs/qiyu/oms/oms.%d{yyyyMMdd}.%i.log</FileNamePattern>
+            <FileNamePattern>/data/logs/qiyu/paymanager/paymanager.%d{yyyyMMdd}.%i.log</FileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
