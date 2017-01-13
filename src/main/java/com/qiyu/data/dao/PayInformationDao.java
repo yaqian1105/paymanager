@@ -2,12 +2,7 @@ package com.qiyu.data.dao;
 
 
 import com.qiyu.common.data.ObjectMapper;
-import com.qiyu.data.entity.PayConfig;
 import com.qiyu.data.entity.PayInformation;
-import com.qiyu.data.vo.MyPage;
-import com.qiyu.data.vo.PayConfigInformationVo;
-import com.qiyu.data.vo.PayConfigVo;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

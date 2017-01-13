@@ -21,12 +21,16 @@
             <div class="personInfo">
                 <div class="personInfo-left"><img src="../static/images/icon_merchant_user.png"/></div>
                 <div class="personInfo-center">
-                    <div class="restaurantName">商户名称 ${merchant.merchantName}</div>
-                    <div class="telephone">${merchant.contact}</div>
+                    <div class="restaurantName">商户名称&#8195;${merchant.merchantName}</div>
+                    <div class="telephone">联系电话&#8195;${merchant.contact}</div>
+                </div>
+                <div class="personInfo-center-2">
+                    <div class="restaurantName">负责人名称&#8195;${merchant.phone}</div>
+                    <div class="telephone">公司名称&#8195;${merchant.agentName}</div>
                 </div>
                 <div class="personInfo-right">
-                    <div class="personName">${merchant.phone}</div>
-                    <div class="agentName">${merchant.agentName}</div>
+                    <div class="personName">总交易订单&#8195;${merchant.transactionCount}单</div>
+                    <div class="agentName">总交易金额&#8195;${merchant.transactionFlow}元</div>
                 </div>
             </div>
             <!--表格Start-->

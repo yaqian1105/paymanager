@@ -43,8 +43,8 @@
     <input type="hidden" name="id" id="id">
 <ul class="mask-con" style="display: none;">
     <li>请输入修改内容</li>
-    <li>费率（%。）<input type="text" name="rate" id="rate"></li>
-    <li>结算方式 <select  name="settlementType" id="settlementType"><option value="0">T+0</option><option value="1">T+1</option></select></li>
+    <li>费率（‰）<input type="text"  name="rate"  onkeyup="value=value.replace(/[^\-?\d.]/g,'')" id="rate"></li>
+    <li>结算方式 <select  name="settlementType" id="settlementType"><option value="1">T+1</option><option value="0">T+0</option></select></li>
     <li><span onclick="closediv()">取消</span><span onclick="saveChange()">保存</span></li>
 </ul>
 </form>

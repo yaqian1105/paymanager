@@ -93,4 +93,21 @@ public class PayConfigDao {
         map.add(getChannel(restaurantId,platform,curPage,pageSize));
         return map;
     }
+
+
+    /**
+     * 查询申请结果（以门店查询）
+     * @param restaurantId
+     * @return
+     */
+    public  List<ResultRecordSheetVo> queryResult(Long restaurantId) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT rrs.*,r.name as restaurant_name from result_record_sheet rrs LEFT JOIN restaurant r on r.id = rrs.restaurant_id ");
+        if(restaurantId!=null && !restaurantId.equals("")){
+            sql.append(" WHERE rrs.restaurant_id =  " + restaurantId);
+        }
+        List<ResultRecordSheetVo> list = jdbcTemplate.query(sql.toString(), new ObjectMapper(ResultRecordSheetVo.class));
+
+        return list;
+    }
 }

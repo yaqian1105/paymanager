@@ -222,8 +222,8 @@ public class PayInformation extends IdLongEntity {
     private String wechatCategory;  //微信类目
     private String aliCategory;     //阿里列名
     private Double tzHandlingFee;   //tz单笔提现手续费(元/笔)
-    private Double tzFeeRate;  //tz交易手续费扣率(%。)
-    private Double toFeeRate; //to交易手续费扣率(%。)
+    private Double tzFeeRate;  //tz交易手续费扣率(‰)
+    private Double toFeeRate; //to交易手续费扣率(‰)
     private Double toHandlingFee;   //to单笔提现手续费(元/笔)
     private String merchantName;  //商户名称
     private String merchantSimpleName;     //商户简称

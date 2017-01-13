@@ -36,18 +36,18 @@
                         <li><span>商户名称</span><input type="text" name="merchantName" id="merchantName" value="${payInformation.merchantName}" placeholder="必填"></li>
                         <li><span>商户简称</span><input type="text" name="merchantSimpleName" placeholder="必填" id="merchantSimpleName" placeholder="必填" value="${payInformation.merchantSimpleName}"></li>
                         <li><span>商户地址</span><input type="text" name="merchantAddress" placeholder="必填" id="merchantAddress" value="${payInformation.merchantAddress}"></li>
-                        <li><span>联系电话</span><input type="number" name="merchantPhone" placeholder="必填" id="merchantPhone" onkeyup="this.value=this.value.replace(' ','')"  value="${payInformation.merchantPhone}"></li>
+                        <li><span>联系电话</span><input type="text" name="merchantPhone" placeholder="必填" id="merchantPhone"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')"  value="${payInformation.merchantPhone}"></li>
                         <li><span>微信类目</span><input type="text" name="wechatCategory" placeholder="必填" id="wechatCategory"  onkeyup="this.value=this.value.replace(' ','')" value="${payInformation.wechatCategory}"><a href=""style="font-size: 14px;color:#F04648; margin-left: 5px;">查看微信商户类目</a> </li>
                         <li><span>支付宝类目</span><input type="text" name="aliCategory" placeholder="必填" id="aliCategory"  onkeyup="this.value=this.value.replace(' ','')" value="${payInformation.aliCategory}"><a href="${rootPath}/payConfig/aliCategory"target="_blank" style="font-size: 14px;color:#F04648;margin-left: 5px;">查看支付宝商户类目</a></li>
                         <li class="li-tip"> 微信类目与支付宝类目两项最少输入一项，输入哪项则表示申请哪项，两项都输入则微信及支付宝都申请，建议两项同时输入。</li>
-                        <li><span>银行卡账号</span><input type="number" name="bankCardNo"  onkeyup="this.value=this.value.replace(' ','')"  placeholder="必填" id="bankCardNo" value="${payInformation.bankCardNo}"></li>
+                        <li><span>银行卡账号</span><input type="text" name="bankCardNo" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="必填" id="bankCardNo" value="${payInformation.bankCardNo}"></li>
                         <li><span>银行卡户名</span><input type="text" placeholder="必填" name="bankAccountName" id="bankAccountName" value="${payInformation.bankAccountName}"></li>
                         <li><span>银行卡开户行</span><input type="text" placeholder="必填" name="businessBankSub" id="businessBankSub" value="${payInformation.businessBankSub}"></li>
                         <li><span>银行卡账户联名号</span><input type="text" placeholder="必填" name="bankCardNumbe" id="bankCardNumbe" value="${payInformation.bankCardNumbe}"></li>
-                        <li><span>T0单笔提现手续费(元/笔)</span><input type="text" placeholder="必填" name="tzHandlingFee"  onkeyup="this.value=this.value.replace(' ','')" id="tzHandlingFee" value="${payInformation.tzHandlingFee}"></li>
-                        <li><span>T0交易手续费扣率(%。)</span><input type="text" placeholder="必填" name="tzFeeRate" onkeyup="this.value=this.value.replace(' ','')"  id="tzFeeRate" value="${payInformation.tzFeeRate}"></li>
-                        <li><span>T1单笔提现手续费(元/笔)</span><input type="text" placeholder="必填" name="toHandlingFee" onkeyup="this.value=this.value.replace(' ','')"  id="toHandlingFee" value="${payInformation.toHandlingFee}"></li>
-                        <li><span>T1交易手续费扣率(%。)</span><input type="text" placeholder="必填" name="toFeeRate" onkeyup="this.value=this.value.replace(' ','')"  id="toFeeRate" value="${payInformation.toFeeRate}"></li>
+                        <li><span>T0单笔提现手续费(元/笔)</span><input type="text" placeholder="必填" name="tzHandlingFee" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" id="tzHandlingFee" value="${payInformation.tzHandlingFee}"></li>
+                        <li><span>T0交易手续费扣率(‰)</span><input type="text" placeholder="必填" name="tzFeeRate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  id="tzFeeRate" value="${payInformation.tzFeeRate}"></li>
+                        <li><span>T1单笔提现手续费(元/笔)</span><input type="text" placeholder="必填" name="toHandlingFee" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" id="toHandlingFee" value="${payInformation.toHandlingFee}"></li>
+                        <li><span>T1交易手续费扣率(‰)</span><input type="text" placeholder="必填" name="toFeeRate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  id="toFeeRate" value="${payInformation.toFeeRate}"></li>
                         <li><span>商户营业执照号</span><input type="text" name="registerNo" value="${payInformation.registerNo}"></li>
                         <li><span>组织机构代码证号</span><input type="text" name="orgCodeCertificateNo" value="${payInformation.orgCodeCertificateNo}"></li>
                         <li><span>商户身份证号</span><input type="text" name="legalRepresentativeCertNo" value="${payInformation.legalRepresentativeCertNo}"></li>

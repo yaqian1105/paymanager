@@ -58,7 +58,7 @@
                         <li><span>应用ID（AppId）</span><input type="text"  placeholder="必填"  name="appid" class="appid"></li>
                         <li><span>支付秘钥key</span><input type="text"  placeholder="必填" name="payKey" class="payKey"></li>
                         <li><span>AppScret（应用秘钥）</span><input type="text"  placeholder="必填" name="appSecret" class="appSecret"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填" name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填" name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>apiclient-cert</span><input type="text"  placeholder="必填" class="annotation-input apiclientCert"  name="apiclientCert" ><div class="annotation">pem格式，用于退款及退款查询。微信商户平台=>ApI安全=>API证书=>下载证书</div></li>
                         <li><span>apiclient-key</span><input type="text"   placeholder="必填" class="annotation-input apiclientKey" name="apiclientKey"><div class="annotation">pem格式，用于退款及退款查询。微信商户平台=>ApI安全=>API证书=>下载证书</div></li>
                     </ul>
@@ -71,7 +71,7 @@
                         <li><span>支付秘钥key</span><input type="text"  placeholder="必填" name="payKey" class="payKey"></li>
                         <li><span>AppScret（应用秘钥）</span><input type="text"  placeholder="必填" name="appSecret" class="appSecret"></li>
                         <li><span>子商户号</span><input type="text"  placeholder="必填" name="subMerchantId" class="subMerchantId"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>apiclient-cert</span><input type="text"  placeholder="必填" class="annotation-input apiclientCert"  name="apiclientCert"><div class="annotation">pem格式，用于退款及退款查询。微信商户平台=>ApI安全=>API证书=>下载证书</div></li>
                         <li><span>apiclient-key</span><input type="text"   placeholder="必填" class="annotation-input apiclientKey" name="apiclientKey"><div class="annotation">pem格式，用于退款及退款查询。微信商户平台=>ApI安全=>API证书=>下载证书</div></li>
                     </ul>
@@ -81,10 +81,10 @@
                     <ul class="select-pay-channel-con wechat-xingye" style="display: none;" data-id='three'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -94,10 +94,10 @@
                     <ul class="select-pay-channel-con wechat-minsheng" style="display: none;" data-id='four'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -107,10 +107,10 @@
                     <ul class="select-pay-channel-con wechat-zhongxin" style="display: none;" data-id='five'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -119,7 +119,7 @@
                     <!--旗鱼子商户start-->
                     <ul class="select-pay-channel-con wechat-qiyu-child" style="display: none;" data-id='six'>
                         <li><span>微信子商户号</span><input type="text" placeholder="必填" class="subMerchantId" name="subMerchantId"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                        <%-- <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
                                 <option value="0">T+0</option><option value="1">T+1</option>
@@ -132,10 +132,10 @@
                     <ul class="select-pay-channel-con wechat-kft" style="display: none;" data-id='twelve'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="text"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -146,10 +146,10 @@
                     <ul class="select-pay-channel-con ali-minsheng" style="display: none;" data-id='seven'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="text"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -159,10 +159,10 @@
                     <ul class="select-pay-channel-con ali-xingye" style="display: none;" data-id='eight'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -174,7 +174,7 @@
                         <li><span>支付宝收款账户</span><input type="text"  placeholder="必填" name="payAccount" class="payAccount"></li>
                         <li><span>安全校验码（key）</span><input type="text"  placeholder="必填" name="saftKey" class="saftKey"></li>
                         <li><span>服务商PID</span><input type="text"  placeholder="必填" name="pid" class="pid"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"name="rate"  class="rate"></li>
                         <li><span>RSA私钥</span><input type="text"  placeholder="必填" class="annotation-input privateKey" name="privateKey"></li>
                         <li><span>RSA公钥</span><input type="text"   placeholder="必填" class="annotation-input publicKey" name="publicKey"></li>
                     </ul>
@@ -186,7 +186,7 @@
                         <li><span>支付宝口碑店铺ID</span><input type="text"  placeholder="必填" name="aliStoreId" class="aliStoreId"></li>
                         <li><span>合作服务商ID（PID）</span><input type="text"  placeholder="必填" name="aliPid" class="aliPid"></li>
                         <li><span>收款支付宝账号ID</span><input type="text"  placeholder="必填" name="payAccount" class="payAccount"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填" name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填" name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                     </ul>
                 </form>
                 <form id="formPayConfig102">
@@ -194,10 +194,10 @@
                     <ul class="select-pay-channel-con ali-zhongxin" style="display: none;" data-id='eleven'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="number"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>
@@ -208,10 +208,10 @@
                     <ul class="select-pay-channel-con ali-kft" style="display: none;" data-id='thirteen'>
                         <li><span>商户号</span><input type="text" placeholder="必填" class="channelMerchantId" name="channelMerchantId"></li>
                         <li><span>商户密钥</span><input type="text" placeholder="必填" name="channelMerchantKey" class="channelMerchantKey"></li>
-                        <li><span>费率(%。)</span><input type="text"  placeholder="必填"  name="rate"  class="rate"></li>
+                        <li><span>费率(‰)</span><input type="text"  placeholder="必填"  name="rate" onkeyup="value=value.replace(/[^\-?\d.]/g,'')"  class="rate"></li>
                         <li><span>结算方式</span>
                             <select name="settlementType" class="settlementType">
-                                <option value="0">T+0</option><option value="1">T+1</option>
+                                <option value="1">T+1</option><option value="0">T+0</option>
                             </select>
                         </li>
                     </ul>

@@ -23,7 +23,8 @@
                 <input type="hidden" name="paymentChannel" id="paymentChannel" value="">
             </form>
             <div class="content-title">
-                <div class="content-title-left"><a href="#" onclick="javascript:history.go(-1);"><img src="../static/images/icon_back.png"/>返回上一页</a></div>
+                <div class="content-title-left"><a href="#" onclick="javascript:history.go(-1);"><img src="../static/images/icon_back.png"/>返回上一页</a>
+                  </div>  <div class="content-title-left"> <a href="#" onclick="queryResult();">查询</a></div>
                 <div class="content-title-right"><img onclick="javascript:location.reload();" src="../static/images/icon_fresh.png"/>${cur_user.userName}
                     <div class="content-title-user-img"></div><a href="${rootPath}/loginOut" class="exit">退出<img src="${rootPath}/static/images/icon_exit.png"></a></div>
             </div><div class="blank"></div>
@@ -66,7 +67,9 @@
     function　savePayInformationBack(){
        window.location.href="${rootPath}/payConfig/payApply?"+$("#formPayConfig").serialize()+"&merchantId="+$("#merchantId").val();
     }
-
+    function queryResult() {
+        window.location.href="${rootPath}/payConfig/queryResultPage?restaurantId="+$("#restaurantId").val();
+    }
 </script>
 <script src="${rootPath}/static/payconfig/business-management-detail-apply.js" type="text/javascript" charset="utf-8"></script>
 

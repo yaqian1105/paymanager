@@ -20,6 +20,7 @@ public class Merchant extends IdLongEntity implements Serializable {
     private String name;//商家名称
     private String simpleName;
     private int type;//DEFAULT '1' COMMENT '1,个人 2,连锁',
+    private int isPosApplication;//是否使用POS应用   DEFAULT '0' COMMENT '0,否 1,是',
     private String contact;//联系人
     private String phone;
     private String detailAddress;
@@ -91,6 +92,14 @@ public class Merchant extends IdLongEntity implements Serializable {
 
     public void setProvinceId(String provinceId) {
         this.provinceId = provinceId;
+    }
+
+    public int getIsPosApplication() {
+        return isPosApplication;
+    }
+
+    public void setIsPosApplication(int isPosApplication) {
+        this.isPosApplication = isPosApplication;
     }
 
     public String getName() {

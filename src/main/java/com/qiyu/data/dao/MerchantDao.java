@@ -84,14 +84,24 @@ public class MerchantDao {
         return page;
     }
 
-
+    /**
+     * 商户详情
+     * @param id
+     * @return
+     */
     public MerchantVo findMerchantById(Long id){
         StringBuilder sql = new StringBuilder();
         sql.append("select m.id, m.name as merchant_name, m.contact, m.phone, a.agent_name from merchant m left join agent a on a.id = m.agent_id where 1=1 ");
-        if(id!=null){
+        if(id!=null && !id.equals("")){
             sql.append(" and m.id = "+id);
         }
-        return (MerchantVo)jdbcTemplate.queryForObject(sql.toString(),  new ObjectMapper(MerchantVo.class));
+        MerchantVo merchantVo = (MerchantVo)jdbcTemplate.queryForObject(sql.toString(),  new ObjectMapper(MerchantVo.class));
+        MerchantVo merchantVo1 = getMerchantCollect(id);
+        if(merchantVo1!=null){
+            merchantVo.setTransactionCount(merchantVo1.getTransactionCount());
+            merchantVo.setTransactionFlow(merchantVo1.getTransactionFlow());
+        }
+        return merchantVo;
     }
 
     /**
@@ -111,6 +121,22 @@ public class MerchantDao {
     }
     public MerchantRepo getRepo() {
         return repo;
+    }
+
+
+    /**
+     * 总交易订单:所有的门店订单总和
+     * 总交易额：订单的总交易额，扣除扣费之前的金额
+     * @param merchantId
+     * @return
+     */
+    public MerchantVo getMerchantCollect(Long merchantId){
+        StringBuilder sql = new StringBuilder();
+        sql.append("select COUNT(1) as transaction_count,SUM(total_amount) as transaction_flow from transaction_info where status = 0 ");
+        if(merchantId!=null && !merchantId.equals("")){
+            sql.append(" and merchant_id = "+ merchantId);
+        }
+        return (MerchantVo)jdbcTemplate.queryForObject(sql.toString(),  new ObjectMapper(MerchantVo.class));
     }
 
 }

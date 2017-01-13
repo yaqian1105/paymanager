@@ -53,7 +53,7 @@
                         <form id="returnPercentage_form">
                             <input type="hidden" name="id"  value="${agent.id}"/>
 
-                            <input type="number" name="returnPercentage">
+                            <input type="text" name="returnPercentage"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')" >
                             <span class="Modify-btn off" onclick="updateReturnP()">确定修改</span>
                         </form>
                     </div>

@@ -5,10 +5,7 @@ import com.qiyu.data.Msg;
 import com.qiyu.data.dao.PayConfigDao;
 import com.qiyu.data.entity.PayConfig;
 import com.qiyu.data.repository.PayConfigRepo;
-import com.qiyu.data.vo.MyPage;
-import com.qiyu.data.vo.PayConfigInformationVo;
-import com.qiyu.data.vo.PayConfigVo;
-import com.qiyu.data.vo.SetConfigVo;
+import com.qiyu.data.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -136,4 +133,17 @@ public class PayConfigService {
         payConfigRepo.save(payConfig);
         return Msg.createSucMsg();
     }
+
+
+/*************************************************************        查看申请结果     ********************************************************/
+    /**
+     * 查询申请结果（以门店查询）
+     * @param restaurantId
+     * @return
+     */
+    public List<ResultRecordSheetVo> queryResult(Long restaurantId) {
+        return payConfigDao.queryResult(restaurantId);
+    }
+
+
 }

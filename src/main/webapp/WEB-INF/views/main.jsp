@@ -24,16 +24,14 @@
             </li>
             <li><a data-href="/merchant/index"><img src="${rootPath}/static/images/icon_bussiness.png"/>商户管理</a></li>
             <li><a data-href="/agent/index"><img src="${rootPath}/static/images/icon_agent.png"/>代理商管理</a></li>
-            <li><a data-href="/transaction/index"><img src="${rootPath}/static/images/icon_transition.png"/>交易管理</a>
-            </li>
+            <li><a data-href="/transaction/index"><img src="${rootPath}/static/images/icon_transition.png"/>交易管理</a></li>
             <li><a data-href="/withdrawl/index"><img src="${rootPath}/static/images/icon_cash.png"/>提现管理</a></li>
-
+            <li><a data-href="/setup/index"><img src="${rootPath}/static/images/icon_cash.png"/>设置</a></li>
         </ul>
     </div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper clearfix p20" style="position: relative;">
-        <iframe id="contentIFrame" src="${rootPath}/echart/welcome" frameborder="0">
-        </iframe>
+        <iframe id="contentIFrame" src="${rootPath}/echart/welcome" frameborder="0"></iframe>
     </div>
 </div>
 </body>

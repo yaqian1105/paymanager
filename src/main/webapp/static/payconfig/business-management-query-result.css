@@ -9,70 +9,61 @@
 	overflow: visible!important;
 }
 .fixed-table-body{
-	border-radius:10px!important;
-}
-span.search-left{
-	float: left;
-	display: inline-block;
-	width: 100px;
-	margin-right: 4px;
-	background-color: #F04648;
-	text-align: center;
-	border-radius: 10px 0 0 10px;
-	color: #FFFFFF;
+	border-radius:10px!important;	
 }
 .pull-right {/*搜索栏外层*/
-    float: left!important;
+    float:left !important;
 }
 input.form-control{/*搜索栏*/
-	width: 630px;
-	border: 1px solid #FE7E00;
+	width: 720px;
+	border: 1px solid #F04648;
 	color: #555555!important;
 	font-size: 14px;
+	float: left;
 }
 span.search-btn{/*搜索按钮*/
  display: inline-block;
  width: 148px;
- float: right;
+ float: left;
+ margin-left: 24px;
  background-color: #F04648;
  color: white;
  text-align: center;
  border-radius: 10px;
- margin-left:12px ;
 }
 span.search-btn img{
 	margin-left: 28px;
 }
-th{/*第一行*/
+th{
 	background-color: #F7F5EE;
-}
-div.th-inner{/*td外层div*/
-	color: #555555;
-	font-weight: normal;
-	padding:20px 0!important;
 }
 th,td{
 	padding: 0!important;
 	text-indent: 32px!important;
 	vertical-align: middle!important;
-	border-radius:10px!important;
 }
 .fixed-table-header{
 	border-radius: 10px;
 }
-tbody tr:last-child{/*最后一行border*/
-	border-bottom: 1px dashed #555555!important;
+tbody tr:last-child td{
+	border: 1px solid #F04648;
 }
-tbody tr{/*中间间隔*/
-	border-bottom: 1px dashed #F04648!important;
-}
-th,tr,td,tbody{/*去掉所有表格*/
+th,tr,td,tbody{
 	border: none!important;
+}
+tbody tr{
+	border-bottom: 1px dashed #F04648!important;
+	margin: 0 10px!important;
 }
 tr td{
 	padding: 24px 0!important;
-	color:#000000;
-	font-size: 14px;
+}
+
+div.th-inner{/*td外层div*/
+	color: #555555;
+	font-weight: normal;
+	padding:20px 0!important;
+	border: none!important;
 }
 .pull-left.pagination-detail{
 	display: none;
@@ -120,62 +111,9 @@ tr td{
 	background-color:#F04648;
 }
 .a-view-detail{
-	display: block;
-	width: 120px;
+	padding: 0 15px;
 	border-radius: 10px;
 	background-color: #F04648;
-	text-indent: 32px;
+	text-align: center;
 	color: #FFFFFF;
-}
-.a-view-detail.center{
-	margin: 6px 0;
-}
-.content-title-left a{
-	padding: 2px 14px;
-	height:30px;
-	background-color: #F04648;
-	color: #FFFFFF;
-	border-radius: 10px;
-}
-.personInfo{
-	height: 120px;
-	background:linear-gradient(0deg,#FF1160,#FF693F);
-	border-radius: 10px;
-}
-.personInfo>div{
-	display: inline-block;	
-	float: left;	
-	color: #FFFFFF;
-	font-size: 14px;
-}
-.personInfo>div>div{
-	height: 60px;
-	line-height: 60px;
-	text-indent: 16px;
-}
-.personInfo-left{
-	width: 154px;
-	height: 100%;
-}
-.personInfo-left img {
-	margin:27px 40px auto 40px;
-}
-.personInfo-center{
-	width:223px;
-	border-right: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-}
-
-.personInfo-center-2{
-	width: 288px;
-	border-right: 1px solid #FFFFFF;
-}
-.personInfo-right{
-	width:231px;
-}
-.personName,.restaurantName{
-	border-bottom: 1px solid #FFFFFF;
-}
-.res-id,.pay-way{
-	margin-right:8px;
 }

@@ -323,4 +323,38 @@ public class PayConfigController {
         return "payconfig/business-management-category";
     }
 
+    /*************************************************************        查看申请结果     ********************************************************/
+
+    /**
+     * 查询申请结果页面
+     * @param restaurantId
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/queryResultPage")
+    public String queryResultPage (@RequestParam(defaultValue = "") Long restaurantId , Model model){
+        model.addAttribute("restaurantId",restaurantId);
+        return "payconfig/query_result";
+    }
+
+    /**
+     * 查询结果
+     * @param restaurantId
+     * @return
+     */
+    @RequestMapping("/queryResult")
+    @ResponseBody
+    public ModelResult queryResult (@RequestParam(defaultValue = "") Long restaurantId ){
+        ModelResult result = new ModelResult();
+        try {
+            List<ResultRecordSheetVo> list =  payConfigService.queryResult(restaurantId);
+            result.isSuccess();
+            result.setData(list);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+
 }

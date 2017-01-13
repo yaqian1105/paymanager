@@ -1,0 +1,230 @@
+.content-box{
+	width: 896px;
+	margin: 0 auto;
+}
+.fixed-table-container{/*最外层边框*/
+	border: 1px solid #F04648;
+	border-radius:10px!important;
+	padding-bottom: 120px!important;
+	overflow: visible!important;
+}
+.fixed-table-body{
+	border-radius:10px!important;
+}
+span.search-left{
+	float: left;
+	display: inline-block;
+	width: 100px;
+	margin-right: 4px;
+	background-color: #F04648;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+	color: #FFFFFF;
+}
+.pull-right {/*搜索栏外层*/
+	float: left!important;
+}
+input.form-control{/*搜索栏*/
+	width: 630px;
+	border: 1px solid #FE7E00;
+	color: #555555!important;
+	font-size: 14px;
+}
+span.search-btn{/*搜索按钮*/
+	display: inline-block;
+	width: 148px;
+	float: right;
+	background-color: #F04648;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	margin-left:12px ;
+}
+span.search-btn img{
+	margin-left: 28px;
+}
+th{/*第一行*/
+	background-color: #FFF7F0;
+	border-radius: 0;
+}
+div.th-inner{/*td外层div*/
+	color: #555555;
+	font-weight: normal;
+	padding:20px 0!important;
+}
+th,td{
+	padding: 0!important;
+	text-indent: 32px!important;
+	vertical-align: middle!important;
+	/*border-radius:10px!important;*/
+}
+.fixed-table-header{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+/*设置页面操作栏状态*/
+/*.operate_img{padding:0 4px;border: 1px solid #F04648;}*/
+/*.operate_img img{vertical-align: baseline;}*/
+/*设置页面下拉列表样式*/
+select{background: url(../images/img_angel.png) no-repeat scroll 300px center transparent;
+	width: 150px;
+	height: 34px;
+	line-height: 24px;
+	border: 1px solid #F04648;
+	border-radius:4px;
+	float: left;
+	color: #F04648;
+	margin-right: 10px;
+	text-align: center;
+	padding-left: 24px;
+	font-size: 14px;
+}
+/*状态栏信息*/
+td .lose{color: #F04648; margin-left: -2px; margin-top: 5px;}
+
+/*最后一行border*/
+/*tbody tr:last-child{
+	border-bottom: 1px dashed #555555!important;
+}*/
+tbody tr{/*中间间隔*/
+	border-bottom: 1px dashed #F04648!important;
+}
+th,tr,td,tbody{/*去掉所有表格*/
+	border: none!important;
+}
+tr td{
+	padding: 24px 0!important;
+	color:#000000;
+	font-size: 14px;
+}
+/*表頭五底邊框*/
+.bootstrap-table .table {
+	border-bottom: none;
+}
+.pull-left.pagination-detail{
+	display: none;
+}
+.pull-right.pagination{
+	width:100%;
+	text-align: center;
+	font-size: 14px;
+}
+.fixed-table-pagination{
+
+	border-radius: 0 0 10px 10px;
+}
+.pagination li a{
+	padding: 0!important;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-left: 2px;
+	text-align: center;
+}
+.page-pre a{
+	background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 10px 0 0 10px!important;
+	font-size: 16px!important;
+}
+.page-next a{
+	background-color: #F04648!important;
+	color: #FFFFFF!important;
+	border-radius: 0px 10px 10px 0px!important;
+}
+.page-number a{
+	color: #000000!important;
+	border: 1px solid #F04648!important;
+}
+.pagination>.active>a{
+	background-color: #F04648;
+	color: #FFFFFF!important;
+}
+.pagination>.active>a:hover{
+	background-color:#F04648;
+}
+.a-view-detail{
+	display: block;
+	width: 120px;
+	border-radius: 10px;
+	background-color: #F04648;
+	text-indent: 32px;
+	color: #FFFFFF;
+}
+.a-view-detail.center{
+	margin: 6px 0;
+}
+.content-title-left a{
+	padding: 2px 14px;
+	height:30px;
+	background-color: #F04648;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+.personInfo{
+	height: 120px;
+	background:linear-gradient(0deg,#FF1160,#FF693F);
+	border-radius: 10px;
+}
+.personInfo>div{
+	display: inline-block;
+	float: left;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.personInfo>div>div{
+	height: 60px;
+	line-height: 60px;
+	text-indent: 16px;
+}
+.personInfo-left{
+	width: 154px;
+	height: 100%;
+}
+.personInfo-left img {
+	margin:27px 40px auto 40px;
+}
+.personInfo-center{
+	width:223px;
+	border-right: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+.personInfo-center-2{
+	width: 288px;
+	border-right: 1px solid #FFFFFF;
+}
+.personInfo-right{
+	width:231px;
+}
+.personName,.restaurantName{
+	border-bottom: 1px solid #FFFFFF;
+}
+.res-id,.pay-way{
+	margin-right:8px;
+}
+input.form-control {width: 574px;}
+div.fixed-table-container{height: 520px!important;}
+.fixed-table-container {border-radius:10px 10px 0 0!important;}
+.set-select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:url("../../static/images/icon_triangle.png")no-repeat 95% center;}
+
+input[type='radio']{-webkit-appearance:none;-moz-appearance:none ;appearance:none ;width:20px;height:20px;border-radius: 10px;border:1px solid #F04648;margin-right: 5px;vertical-align: sub;}
+input[type='radio']:checked{background: url("../../static/images/icon_ circle.png")no-repeat center center;}
+.pos-apply{height: 128px;border: 1px solid #F04648;border-top: none;border-radius:0 0 10px 10px;}
+.pos-apply p:nth-child(1){display: inline-block;margin: 34px 0 32px 30px;}
+.pos-apply p:nth-child(3){color: #ccc;margin-left: 30px;}
+.pos-apply form{float: right;color:#F04648;margin-right: 50px;margin-top: 30px;height: 28px;line-height: 28px;}
+.pos-apply form label{font-weight: normal;font-size: 14px}
+.pos-apply form label:nth-child(1){margin-right: 20px;}
+.pos-apply form label:nth-child(2){margin-right: 12px;}
+.pos-apply form button{-webkit-appearance:none;width: 50px;height: 24px;line-height: 24px;font-size: 14px;color:#fff;background-color: #F04648;border:none;border-radius: 10px;}
+.pos-account{height: 90px;border: 1px solid #F04648;border-radius: 10px;margin-top: 24px;padding: 34px 0 0 30px;}
+.pos-account form{width: 100%;display: inline;}
+.pos-account span:nth-child(1){margin-right: 40px;}
+.pos-account input[type='text']{border:0;}
+.pos-account input[type='text']:disabled{background-color:#fff;}
+.pos-account button{float: right;width: 80px;height: 24px;margin-right: 50px;font-size: 14px;color:#fff;background-color: #F04648;border:none;border-radius: 10px;}
+
+.belong{display: none;}
+.operate_img{-webkit-appearance:none;-moz-appearance:none ;appearance:none ;width: 20px;height: 20px;border: 1px solid #F04648;}
+.operate_img:checked{background: url("../../static/images/icon_checked.png")no-repeat center center;}
+#searchForm{display: inline;}

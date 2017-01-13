@@ -10,12 +10,15 @@ import com.qiyu.data.Msg;
 import com.qiyu.data.dao.PayInformationDao;
 import com.qiyu.data.entity.PayConfig;
 import com.qiyu.data.entity.PayInformation;
+import com.qiyu.data.entity.ResultRecordSheet;
 import com.qiyu.data.repository.PayConfigRepo;
 import com.qiyu.data.repository.PayInformationRepo;
+import com.qiyu.data.repository.ResultRecordSheetRepo;
 import com.qiyu.data.vo.PayInformationVo;
 import com.qiyu.pay.domain.request.RequestPayReq;
 import com.qiyu.pay.domain.result.RequestPayRlt;
 import com.qiyu.pay.service.IPayService;
+import org.omg.CORBA.PRIVATE_MEMBER;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +33,8 @@ public class PayInformationService {
     private PayInformationDao payInformationDao;
     @Autowired
     private PayInformationRepo payInformationRepo;
+    @Autowired
+    private ResultRecordSheetRepo resultRecordSheetRepo;
     @Autowired
     private IPayService alipaysign;
     @Autowired
@@ -137,7 +142,7 @@ public class PayInformationService {
             if(null != payInformation.getWechatCategory() && !payInformation.getWechatCategory().equals("")){
                 msg = msg + wrapMerchantSign(payInformations,"WXZF","weixin","201");
             }
-            logger.error("支付申请添加记录：msg={}",msg);
+            logger.info("支付申请添加记录：msg={}",msg);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -196,8 +201,36 @@ public class PayInformationService {
           ModelResult modelResult = cmbcPayService.merchantSign(cmbcMerchantSignReq);
             if (null != modelResult && null != modelResult.getData()){
                 CMBCMerchantSignRlt merchantSignRlt = (CMBCMerchantSignRlt) modelResult.getData();
-                logger.error("支付申请结果：CMBCMerchantSignRlt={}",merchantSignRlt);
+                logger.info("支付申请结果：CMBCMerchantSignRlt={}",merchantSignRlt);
+                //申请后记录结果
+                ResultRecordSheet resultRecordSheet = new ResultRecordSheet();
+                resultRecordSheet.setCreateAt(new Date());
+                resultRecordSheet.setRestaurantId(payInformation.getRestaurantId());
+                String materialCategory = "民生银行";
+                if(payInformation.getRestaurantSignType()==0){
+                    materialCategory = materialCategory +"个体工商户";
+                }else if(payInformation.getRestaurantSignType()==1){
+                    materialCategory = materialCategory +"企业";
+                }else if(payInformation.getRestaurantSignType()==2){
+                    materialCategory = materialCategory +"个人";
+                }
+                resultRecordSheet.setMaterialCategory(materialCategory);
+                resultRecordSheet.setMaterialType("进件");
+
                 if (merchantSignRlt.getRespCode().equals("000000") && merchantSignRlt.getRespType().equals("S")){
+                    //1.1新增记录申请结果，并记录
+                    resultRecordSheet.setResultRemark(merchantSignRlt.getMerchantCode());
+                    resultRecordSheet.setResultStatus("1");
+                    resultRecordSheetRepo.save(resultRecordSheet);
+                    return msg+"申请成功";
+                }else{
+                    resultRecordSheet.setResultRemark(merchantSignRlt.getRespMsg());
+                    resultRecordSheet.setResultStatus("-1");
+                    resultRecordSheetRepo.save(resultRecordSheet);
+                    return msg+"申请失败";
+                }
+            }
+               /* if (merchantSignRlt.getRespCode().equals("000000") && merchantSignRlt.getRespType().equals("S")){
                     PayConfig payConfig = new PayConfig();
                     payConfig.setCreateAt(new Date());
                     payConfig.setRestaurantId(payInformation.getRestaurantId());
@@ -206,8 +239,7 @@ public class PayInformationService {
                     payConfig.setChannelMerchantId(merchantSignRlt.getMerchantCode());
                     payConfigRepo.save(payConfig);
                     return msg+"申请成功";
-                }
-            }
+                }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
